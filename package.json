@@ -1,18 +1,28 @@
 {
   "name": "@tawann-vcc-apps/source",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "frontend:dev": "nx run frontend:serve",
+    "frontend:build": "nx run frontend:build",
+    "desktop:dev" : "nx run desktop:serve",
+    "desktop:make" : "nx run desktop:make --mac",
+    "desktop:make:win" : "nx run desktop:make:window --win",
+    "postinstall": "electron-builder install-app-deps"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@nrwl/nx-plugin": "^17.2.8",
     "@nx/cypress": "17.2.8",
     "@nx/eslint": "17.2.8",
     "@nx/eslint-plugin": "17.2.8",
+    "@nx/jest": "17.2.8",
     "@nx/js": "17.2.8",
     "@nx/react": "17.2.8",
     "@nx/vite": "17.2.8",
@@ -21,7 +31,8 @@
     "@swc/cli": "~0.1.62",
     "@swc/core": "~1.3.85",
     "@testing-library/react": "14.0.0",
-    "@types/node": "18.14.2",
+    "@types/jest": "^29.4.0",
+    "@types/node": "18.16.9",
     "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
@@ -30,6 +41,8 @@
     "@vitest/coverage-v8": "~0.34.6",
     "@vitest/ui": "~0.34.6",
     "cypress": "^13.0.0",
+    "electron": "^27.0.4",
+    "electron-builder": "^24.9.1",
     "eslint": "~8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-cypress": "^2.13.4",
@@ -37,11 +50,19 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-environment-node": "^29.4.1",
     "jsdom": "~22.1.0",
     "nx": "17.2.8",
+    "nx-electron": "^17.0.1",
+    "pnpm": "^8.14.0",
     "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
     "typescript": "~5.2.2",
     "vite": "^5.0.0",
-    "vitest": "~0.34.6"
+    "vitest": "~0.34.6",
+    "webpack-node-externals": "^3.0.0"
   }
 }

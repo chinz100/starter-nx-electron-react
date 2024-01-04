@@ -1,0 +1,30 @@
+{
+  "$schema": "../../../../../node_modules/nx-electron/src/validation/maker.schema.json",
+  "productName": "TawanBypass",
+  "buildVersion": "0.0.1",
+  "win": {
+    "asar": true,
+    "legalTrademarks": "(c) 2024 TawanBypass SPITTA TEAM",
+    "publisherName": "TawanBypass",
+    "target": [
+      "nsis"
+    ]
+  },
+  "mac": {
+    "category": "your.app.TawanBypass.type",
+    "target": [
+      {
+        "target": "dmg",
+        "arch": [
+          "arm64"
+        ]
+      },
+      {
+        "target": "zip",
+        "arch": [
+          "arm64"
+        ]
+      }
+    ]
+  }
+}
